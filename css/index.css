@@ -134,3 +134,20 @@ html,
 body {
   height: 100%;
 }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+.flexbox-support {
+  display: flex;
+  justify-content: center;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  color: #3480eb;
+}
