@@ -19,6 +19,9 @@
   font-display: swap;
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
 }
+body {
+  font-family: 'Lato', sans-serif;
+}
 h1 {
   color: #3480eb;
 }
@@ -32,10 +35,45 @@ h1 {
   margin-bottom: 30px;
   width: 75%;
 }
-.personal-info {
+.container .personal-info {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   margin: 1%;
+}
+@media (max-width: 500px) {
+  .container .personal-info {
+    width: 100%;
+    margin: 2%;
+    padding: 2%;
+  }
+  .container .personal-info h3 {
+    font-size: 1.2em;
+  }
+}
+.container .work-history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .container .work-history {
+    width: 90%;
+    padding-top: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .container .work-history {
+    width: 90%;
+    padding-top: 30%;
+  }
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }

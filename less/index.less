@@ -1,6 +1,7 @@
 // Variables
 @blue-color: #3480eb;
 @font-family: 'Lato', sans-serif;
+@responsive-width: 90%;
 
 // Mixins
 .navbox-flex-support {
@@ -8,7 +9,6 @@
 	// align-items: center;
 	justify-content: space-evenly;
 	margin: 2%;
-	
 }
 
 .flexbox-support {
@@ -27,38 +27,57 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-
-// body {
-// 	font-family: @font-family;
-// }
+body {
+	font-family: @font-family;
+}
 
 h1 {
 	color: @blue-color;
 }
 
 
-
+//Main Container
 .container {
-
-	
 	nav {
 		.navbox-flex-support();
 	}
-	
 
 	.text_flexbox {
 		height: 300px;
 		margin-bottom: 30px;
 		width: 75%;
-		
 	}
 
-	@media (max-width: 500px) {
+	.personal-info {
+		.flexbox-support();
+		margin: 1%;
 
+		@media (max-width: 500px) {
+			width: 100%;
+			margin: 2%;
+			padding: 2%;
+			h3 {
+				font-size: 1.2em;
+			}
+		}
 	}
-}
+	
+	.work-history {
+		.flexbox-support();
+		margin: 2%;
 
-.personal-info {
-	.flexbox-support();
-	margin: 1%;
+		@media (max-width: 500px) {
+			width: @responsive-width;
+			padding-top: 50%;
+		}
+
+		@media (max-width: 768px) {
+			width: @responsive-width;
+			padding-top: 30%;
+		}
+	}
+
+	footer {
+		.flexbox-support();
+	}
 }
