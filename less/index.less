@@ -1,59 +1,83 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+// Variables
+@blue-color: #3480eb;
+@font-family: 'Lato', sans-serif;
+@responsive-width: 90%;
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+// Mixins
+.navbox-flex-support {
+	display: flex;
+	// align-items: center;
+	justify-content: space-evenly;
+	margin: 2%;
+}
+
+.flexbox-support {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+.debug-border {
+	border: 1px solid red;
 }
+
+
+// LESS CODE STARTS HERE!!!!!!!!!!!!!
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	font-family: @font-family;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+h1 {
+	color: @blue-color;
 }
 
-html, body {
-    height: 100%;
-}
 
+//Main Container
+.container {
+	nav {
+		.navbox-flex-support();
+	}
+
+	.text_flexbox {
+		height: 300px;
+		margin-bottom: 30px;
+		width: 75%;
+	}
+
+	.personal-info {
+		.flexbox-support();
+		margin: 1%;
+
+		@media (max-width: 500px) {
+			width: 100%;
+			margin: 2%;
+			padding: 2%;
+			h3 {
+				font-size: 1.2em;
+			}
+		}
+	}
+	
+	.work-history {
+		.flexbox-support();
+		margin: 2%;
+
+		@media (max-width: 500px) {
+			width: @responsive-width;
+			padding-top: 50%;
+		}
+
+		@media (max-width: 768px) {
+			width: @responsive-width;
+			padding-top: 30%;
+		}
+	}
+
+	footer {
+		.flexbox-support();
+	}
+}

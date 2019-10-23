@@ -1,1 +1,79 @@
-/* Compile your LESS file! */
+.navbox-flex-support {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2%;
+}
+.flexbox-support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.debug-border {
+  border: 1px solid red;
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+h1 {
+  color: #3480eb;
+}
+.container nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2%;
+}
+.container .text_flexbox {
+  height: 300px;
+  margin-bottom: 30px;
+  width: 75%;
+}
+.container .personal-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin: 1%;
+}
+@media (max-width: 500px) {
+  .container .personal-info {
+    width: 100%;
+    margin: 2%;
+    padding: 2%;
+  }
+  .container .personal-info h3 {
+    font-size: 1.2em;
+  }
+}
+.container .work-history {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin: 2%;
+}
+@media (max-width: 500px) {
+  .container .work-history {
+    width: 90%;
+    padding-top: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .container .work-history {
+    width: 90%;
+    padding-top: 30%;
+  }
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
